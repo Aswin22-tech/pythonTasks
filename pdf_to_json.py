@@ -44,8 +44,6 @@ def convert_pdf_to_txt(path):
 def parse_to_json(main_list):
     dic={}
     min_dic={}
-    tag_list=[]
-    details=[]
     
     # Removing unnecessary characters, newline characters etc.
     main_list = [sub.strip() for sub in main_list]
@@ -126,6 +124,8 @@ def parse_to_json(main_list):
     return dic
 
 
+# ### Driver function
+
 # In[ ]:
 
 
@@ -134,17 +134,21 @@ import sys
 if __name__=="__main__":
     print("argument:", sys.argv)
     
+    # Picking input file from command line
     inputfile = sys.argv[1]
     print("inputfile:", inputfile)
 
+     # Picking output file from command line
     outputfile = sys.argv[2]
     print("outputfile:", outputfile)    
     
+    # Calling the functions
     element = convert_pdf_to_txt(inputfile)
 
     main_list = element.split('\n')
     diction = parse_to_json(main_list)
-
+    
+    # Creating a JSON dump
     with open(outputfile, 'w', encoding ='utf8') as json_file: 
         json.dump(diction, json_file, ensure_ascii = False) 
 
