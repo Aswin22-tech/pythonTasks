@@ -1,8 +1,10 @@
 # pythonTasks
-Interview_sample_data.pdf ----> The input pdf that was provided
-sample_data.json ------> Sample output that was provided
-pdf_to_json.py ------> executable py code. This needs to be executed from command line
-pdf_to_json.ipynb -----> notebook with the code
+Files present
+-----------------
+1. Interview_sample_data.pdf ----> The input pdf that was provided
+2. sample_data.json ------> Sample output that was provided
+3. pdf_to_json.py ------> executable py code. This needs to be executed from command line
+4. pdf_to_json.ipynb -----> notebook with the code
 
 
 
